@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+
+            "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+      
+    <h:head/>
+
+    <h:messages />
+
+    <h:body>
+        <p>
+            Hello JSF 2.3 with CDI activation
+        </p>
+
+        <h:form>
+            <p>
+                <strong>Welcome to JSF 2.3 world: </strong> 
+                <div>#{helloBean.message}</div>
+            </p>
+            <p>
+                <strong>Message: </strong> 
+                <div><input type="text" f:id="message" f:value="#{helloBean.message}"></input></div>
+            </p>
+            <p>
+                 <input type="button" value="Say Hi to JSF" f:action="#{helloBean.sayHi()}" />
+                <h:commandButton value="teste" actionListener="#{helloBean.sayHi()}"></h:commandButton> 
+            </p>
+        </h:form>
+
+    </h:body>
+
+</html>
