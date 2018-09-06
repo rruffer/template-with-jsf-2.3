@@ -4,9 +4,11 @@
  * and open the template in the editor.
  */
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
-import java.util.Objects;
+
 import javax.enterprise.context.RequestScoped;
+import javax.faces.view.ViewScoped;
 import javax.inject.Named;
 
 /**
@@ -14,10 +16,12 @@ import javax.inject.Named;
  * @author hantsy
  */
 @Named
-@RequestScoped
-public class HelloBean {
-
-    private String message = "Teste";
+@ViewScoped
+public class HelloBean implements Serializable {
+	
+	private static final long serialVersionUID = -6896803213320150843L;
+	
+	private String message = "Teste";
 
     public String getMessage() {
         return message;
@@ -28,7 +32,7 @@ public class HelloBean {
     }
 
     public void sayHi() {
-        this.message = this.message+ " received at " + LocalDateTime.now();
+        this.message = " received at " + LocalDateTime.now();
        System.out.println("Teste"); 
        
     }
