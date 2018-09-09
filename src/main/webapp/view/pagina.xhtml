@@ -3,32 +3,25 @@
 	xmlns:f="http://xmlns.jcp.org/jsf/core"
 	xmlns:p="http://primefaces.org/ui"
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-	template="/templates/layout.xhtml">
+	template="/templates/layout2.xhtml">
 
 	<ui:define name="title">
-	
-Título
+		Título
 	</ui:define>
 
 	<ui:define name="description">
-	Descrição título
+		Descrição título
 	</ui:define>
 
 	<ui:define name="body">
-
 		<h:form>
 			<p:panelGrid columns="2"
 				columnClasses="ui-grid-col-2,ui-grid-col-4,ui-grid-col-2,ui-grid-col-4"
 				layout="grid" styleClass="ui-fluid card">
 				Corpo
+				#{admin.version}
 			</p:panelGrid>
 		</h:form>
-
-		<script>
-			function teste() {
-				alert("funcionouu!!");
-			}
-		</script>
 	</ui:define>
 
 

@@ -50,7 +50,10 @@
 		<error-code>500</error-code>
 		<location>/error/500.xhtml</location>
 	</error-page>
-	
+
+	<listener>
+		<listener-class>init.ManifestVars</listener-class>
+	</listener>
     
     <session-config>
         <session-timeout>

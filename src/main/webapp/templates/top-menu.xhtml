@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
-	xmlns:f="http://xmlns.jcp.org/jsf/core">
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions">
 
 <!-- Logo -->
 <a href="index2.html" class="logo"> <!-- mini logo for sidebar mini 50x50 pixels -->
@@ -18,66 +20,88 @@
 	<div class="navbar-custom-menu">
 		<ul class="nav navbar-nav">
 			<!-- Messages: style can be found in dropdown.less-->
-			<li class="dropdown messages-menu"><a href="#"
-				class="dropdown-toggle" data-toggle="dropdown"> <i
-					class="fa fa-envelope-o"></i> <span class="label label-success">4</span>
-			</a>
+			<li class="dropdown messages-menu">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown"> 
+					<i class="fa fa-envelope-o"></i> 
+					<span class="label label-success">4</span>
+			    </a>
 				<ul class="dropdown-menu">
-					<li class="header">You have 4 messages</li>
+					<li class="header">você tem 4 mensagens</li>
 					<li>
 						<!-- inner menu: contains the actual data -->
 						<ul class="menu">
 							<li>
-								<!-- start message --> <a href="#">
+								<!-- start message --> 
+								<a href="#">
 									<div class="pull-left">
 										<img src="" class="img-circle" alt="User Image" />
 									</div>
 									<h4>
-										Support Team <small><i class="fa fa-clock-o"></i> 5
-											mins</small>
+										Equipe de suporte 
+										<small>
+											<i class="fa fa-clock-o"></i> 5	min
+										</small>
 									</h4>
-									<p>Why not buy a new awesome theme?</p>
-							</a>
+									<p>Por que não comprar um novo tema incrível?</p>
+								</a>
 							</li>
 							<!-- end message -->
-							<li><a href="#">
+							<li>
+								<a href="#">
 									<div class="pull-left">
 										<img src="" class="img-circle" alt="User Image" />
 									</div>
 									<h4>
-										AdminLTE Design Team <small><i class="fa fa-clock-o"></i>
-											2 hours</small>
+										AdminLTE Design Team 
+										<small>
+											<i class="fa fa-clock-o"></i> 2 hours
+										</small>
 									</h4>
-									<p>Why not buy a new awesome theme?</p>
-							</a></li>
-							<li><a href="#">
+									<p>Por que não comprar um novo tema incrível?</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
 									<div class="pull-left">
 										<img src="" class="img-circle" alt="User Image" />
 									</div>
 									<h4>
-										Developers <small><i class="fa fa-clock-o"></i> Today</small>
+										Developers 
+										<small>
+											<i class="fa fa-clock-o"></i> Today
+										</small>
 									</h4>
 									<p>Why not buy a new awesome theme?</p>
-							</a></li>
-							<li><a href="#">
+								</a>
+							</li>
+							<li>
+								<a href="#">
 									<div class="pull-left">
 										<img src="" class="img-circle" alt="User Image" />
 									</div>
 									<h4>
-										Sales Department <small><i class="fa fa-clock-o"></i>
-											Yesterday</small>
+										Sales Department 
+										<small>
+											<i class="fa fa-clock-o"></i> Yesterday
+										</small>
 									</h4>
 									<p>Why not buy a new awesome theme?</p>
-							</a></li>
-							<li><a href="#">
+								</a>
+							</li>
+							<li>
+								<a href="#">
 									<div class="pull-left">
 										<img src="" class="img-circle" alt="User Image" />
 									</div>
 									<h4>
-										Reviewers <small><i class="fa fa-clock-o"></i> 2 days</small>
+										Reviewers 
+										<small>
+											<i class="fa fa-clock-o"></i> 2 days
+										</small>
 									</h4>
 									<p>Why not buy a new awesome theme?</p>
-							</a></li>
+								</a>
+							</li>
 						</ul>
 					</li>
 					<li class="footer"><a href="#">See All Messages</a></li>
@@ -193,40 +217,30 @@
 						alt="User Image" /> <span class="hidden-xs">Alexander
 						Pierce</span>
 			</a>
-				<ul class="dropdown-menu">
-					<!-- User image -->
-					<li class="user-header"><h:graphicImage library="img"
-							name="user2-160x160.jpg" styleClass="user-image" alt="User Image" />
-						<img src="" class="img-circle" alt="User Image" />
-
-						<p>
-							Alexander Pierce - Web Developer <small>Member since Nov.
-								2012</small>
-						</p></li>
-					<!-- Menu Body -->
-					<li class="user-body">
-						<div class="row">
-							<div class="col-xs-4 text-center">
-								<a href="#">Followers</a>
-							</div>
-							<div class="col-xs-4 text-center">
-								<a href="#">Sales</a>
-							</div>
-							<div class="col-xs-4 text-center">
-								<a href="#">Friends</a>
-							</div>
-						</div> <!-- /.row -->
-					</li>
-					<!-- Menu Footer-->
-					<li class="user-footer">
-						<div class="pull-left">
-							<a href="#" class="btn btn-default btn-flat">Profile</a>
-						</div>
-						<div class="pull-right">
-							<a href="#" class="btn btn-default btn-flat">Sign out</a>
-						</div>
-					</li>
-				</ul></li>
+            <ul class="dropdown-menu">
+                <li class="user-header">
+                    <div class="hidden-xs">
+                        <pe:gravatar style="border-radius: 50%"
+                                     value="rmpestano@gmail.com"/>
+                    </div>
+                    <p>
+                        Rafael M. Pestano
+                        <small> Java EE Developer </small>
+                    </p>
+                </li>
+                <li class="user-footer">
+                    <h:form prependId="false">
+                        <div class="pull-left">
+                            <p:commandLink  styleClass="btn btn-danger"  value="Change password"/>
+                        </div>
+                        <div class="pull-right">
+                            <p:commandLink id="logout"   title="Logoff">
+                                <i class="fa fa-sign-out fa-2x"></i>
+                            </p:commandLink>
+                        </div>
+                    </h:form>
+                </li>
+            </ul></li>
 			<!-- Control Sidebar Toggle Button -->
 			<li><a href="#" data-toggle="control-sidebar"><i
 					class="fa fa-gears"></i></a></li>
