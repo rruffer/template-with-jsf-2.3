@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
-Built-By: rruffer
-buildTime: 09/09/2018 09:23:46
+Built-By: rodolfo.ruffer
+buildTime: 10/09/2018 10:18:40
 version: 0.0.2
-Build-Jdk: 1.8.0_162
+Build-Jdk: 1.8.0_181
 Created-By: Maven Integration for Eclipse
 

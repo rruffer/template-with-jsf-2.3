@@ -51,9 +51,9 @@
 		<location>/error/500.xhtml</location>
 	</error-page>
 
-	<listener>
+<!-- 	<listener>
 		<listener-class>init.ManifestVars</listener-class>
-	</listener>
+	</listener> -->
     
     <session-config>
         <session-timeout>
